@@ -1,34 +1,57 @@
-<h2>Sign up</h2>
+<style>
+      body {
+        background: linear-gradient(
+            rgba(0,0,0, 0.7),
+            rgba(0,0,0, 0.7)
+        ), url("/bg.jpeg") no-repeat center center fixed
+      }
+      .panel-register {
+          width: 220px;
+          margin-top: 2%;
+      }
 
+</style>
+<div class="row">
+<div class="panel panel-register col-xs-4" align="center">
+<h3>Zarejestruj się</h3>
+  
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :username %><br />
+    <h4 style="margin-bottom: 0.02%; margin-top: 30px;">Użytkownik</h4><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
+        <h4 style="margin-bottom: 0.02%; margin-top: 30px;">E-mail</h4><br />
     <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+        <h4 style="margin-bottom: 0.02%; margin-top: 30px;">Hasło</h4><br />
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> znaków minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+        <h4 style="margin-bottom: 0.02%; margin-top: 30px;">Potwierdź hasło</h4><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions" style="margin-top: 30px;">
+    <%= f.submit "Zarejestruj się" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+  <div class="col-xs-8" style="margin-left: 100px; margin-top: 20px;">
+    <h1 style="color: white; font-weight: bold;"> ZAREJESTRUJ SIĘ JUŻ DZIŚ!</h1>
+    <h2 style="color: white;"> To nic nie kosztuje!</h2>
+    
+  </div>
+</div>
+

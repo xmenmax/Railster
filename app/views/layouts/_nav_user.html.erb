@@ -13,31 +13,24 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/home">Moments</a></li>
-        <li><a href="/home">Notifications</a></li>
-        <li><a href="/home">Messages</a></li>
+        <li><a href="/home">Główna</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
                 <form class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Railster">
+          <input type="text" class="form-control" placeholder="Przeszukaj Railster">
         </div>
       </form>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/user/<%= current_user.username %>">Profile</a></li>
+            <li><a href="/user/<%= current_user.username %>">Profil</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Help</a></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to('Settings', edit_user_registration_path) %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to('Log out', destroy_user_session_path, :method => :delete) %></li>
+            <li><%= link_to('Wyloguj się', destroy_user_session_path, :method => :delete) %></li>
           </ul>
-            <li type="button" class="btn btn-primary navbar-btn">Add Post</li>
+            <li type="button" class="btn btn-primary navbar-btn">Dodaj Post</li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

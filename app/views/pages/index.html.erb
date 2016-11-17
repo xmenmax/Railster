@@ -47,30 +47,31 @@
         
     }
 </style>
-    <div class="container-index row">
-        <div class="col-sm-6">
-            <h1>Welcome To Railster.</h1>
+    <center>
+    <div align="center" style="margin-top: 5%;" class="container-index row">
+        <div class="col-sm-12">
+            <h1>Witaj w Railsterze.</h1>
             <p class="text">
-                Connect with your buddies. Chat with new friends. <br>
-                Share your adventures. <br>
-                Just like a blog, but with less characters!
-            </p>        
+                Railster jest mikroblogiem stworzonym <br>
+                w frameworku Ruby On Rails <br>
+                Połącz się ze swoimi znajomymi. <br>
+                Rozmawiaj z nowymi przyjaciółmi. <br>
+                Podziel się swoimi przygodami. <br>
+                To zupełnie jak blog, <br>
+                ale z mniejszą ilością znaków! <br>
+            </p>   
+            <br>
+            <a href="/users/sign_in"><span style="margin-bottom: 15px;" type="button" class="btn btn-primary">Zaloguj się</span></a> <br>
+            <a href="/users/sign_up"><span style="margin-bottom: 15px;" type="button" class="btn btn-primary">Zarejestruj się</span></a>
+            
         </div>
-        
-        <div class="col-sm-6">
-           <div class="log-in panel">
-               Log in
-           </div>
-           <div class="sign-up panel">
-               Sign Up
-           </div>
-        </div>
-        
         <div class="col-sm-12">
             <p class="footer-links">© 2016 Railster</p>
+            <img src="/rt.png" width=20px height=20px></img>
         </div>
 
     </div>
+    </center>
 <% else %>
 
 <script>document.location = "/home"</script>
